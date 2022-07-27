@@ -23,35 +23,45 @@ fn set_wallpaper(hour: u32) {
             .arg("set")
             .arg("org.gnome.desktop.background")
             .arg("picture-uri-dark")
-            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_night.jpg");
+            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_night.jpg")
+            .spawn()
+            .expect("failed to execute");
     } else if hour >= 6 && hour < 10 {
         // morning
         Command::new("gsettings")
             .arg("set")
             .arg("org.gnome.desktop.background")
             .arg("picture-uri-dark")
-            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_morning.jpg");
+            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_morning.jpg")
+            .spawn()
+            .expect("failed to execute");
     } else if hour >= 10 && hour < 18 {
         // day
         Command::new("gsettings")
             .arg("set")
             .arg("org.gnome.desktop.background")
             .arg("picture-uri-dark")
-            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_day.jpg");
+            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_day.jpg")
+            .spawn()
+            .expect("failed to execute");
     } else if hour >= 18 && hour < 22 {
         // evening
         Command::new("gsettings")
             .arg("set")
             .arg("org.gnome.desktop.background")
             .arg("picture-uri-dark")
-            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_evening.jpg");
+            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_evening.jpg")
+            .spawn()
+            .expect("failed to execute");
     } else {
         // night
         Command::new("gsettings")
             .arg("set")
             .arg("org.gnome.desktop.background")
             .arg("picture-uri-dark")
-            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_night.jpg");
+            .arg("file:////home/cyn/Dropbox/Wallpapers/daytime/tropic_island_night.jpg")
+            .spawn()
+            .expect("failed to execute");
     }
 }
 
